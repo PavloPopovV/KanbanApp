@@ -1,0 +1,1 @@
+export const GITHUB_URL_PATTERN = /^https:\/\/github\.com\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+$/
