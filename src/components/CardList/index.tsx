@@ -15,7 +15,7 @@ const CardList = ({
       <h3 className="font-bold text-lg text-center text-white uppercase pt-3">
         {board.title}
       </h3>
-      <ul className="px-5 h-120 overflow-y-auto overscroll-auto">
+      <ul className="px-5 h-[calc(100vh-280px)] overflow-y-auto overscroll-auto">
         <DropArea onDrop={() => onDrop(board.status, 0)} />
         {board.list.length
           ? board.list.map((task, index) => (
@@ -30,7 +30,7 @@ const CardList = ({
                 <DropArea onDrop={() => onDrop(board.status, index + 1)} />
               </React.Fragment>
             ))
-          : <span className="text-white text-center block">No tasks in this column yet!</span>}
+          : <span className="text-white text-center block text-sm">No issues in this column yet! Drag and drop on me&hearts;</span>}
       </ul>
     </li>
   )

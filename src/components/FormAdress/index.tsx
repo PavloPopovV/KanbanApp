@@ -29,13 +29,13 @@ const FormAdress = () => {
     <section aria-labelledby="form-section">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-[100%] flex justify-between items-start gap-5 mb-5"
+        className="w-[100%] border border-black rounded-xl flex items-center justify-between mb-5 px-4 py-6 gap-5 bg-[#1b1b1b]"
       >
-        <label htmlFor="url" className="w-[85%] relative pb-4">
+        <label htmlFor="url" className="w-full relative">
           <FormInput
             register={register}
             name="url"
-            placeholder="https://github.com/facebook/react"
+            placeholder="Enter the URL of the GitHub repository to check for issues"
             pattern={GITHUB_URL_PATTERN}
           />
           {errors.url && <FormError error={errors.url.message} />}

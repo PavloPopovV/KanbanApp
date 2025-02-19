@@ -19,9 +19,7 @@ const Column = () => {
             />
           ))}
         </ul>
-      ) : (
-        <span>Enter URL to check issues!</span>
-      )}
+      ) : null}
     </section>
   )
 }

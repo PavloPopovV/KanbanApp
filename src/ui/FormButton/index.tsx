@@ -4,7 +4,7 @@ const FormButton = ({ title, type, isLoading }: FormButtonProps) => {
   return (
     <button
       type={type}
-      className="w-[10%] h-[40px] rounded-xl cursor-pointer uppercase bg-blue-600 text-white flex items-center justify-center"
+      className="w-[150px] h-[40px] rounded-xl cursor-pointer  bg-blue-600 text-white flex items-center justify-center"
       disabled={isLoading}
     >
       {isLoading ?     

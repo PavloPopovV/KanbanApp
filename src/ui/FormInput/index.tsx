@@ -8,7 +8,7 @@ const FormInput = ({
 }: FormInputProps) => {
   return (
     <input
-      className="py-1 px-3 rounded-xl w-full h-[40px] text-white bg-[#1b1b1b]"
+      className="py-1 px-3 rounded-xl w-full h-[40px] text-black bg-white focus:outline-0"
       type="text"
       placeholder={placeholder}
       {...register(name, {
