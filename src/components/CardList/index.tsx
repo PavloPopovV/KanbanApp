@@ -11,7 +11,7 @@ const CardList = ({
   setSourceColumnIndex,
 }: CardListProps) => {
   return (
-    <div className="bg-[#1b1b1b] rounded-2xl">
+    <li className="bg-[#1b1b1b] rounded-2xl">
       <h3 className="font-bold text-lg text-center text-white uppercase pt-3">
         {board.title}
       </h3>
@@ -32,7 +32,7 @@ const CardList = ({
             ))
           : <span className="text-white text-center block">No tasks in this column yet!</span>}
       </ul>
-    </div>
+    </li>
   )
 }
 

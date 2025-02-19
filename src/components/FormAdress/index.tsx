@@ -3,9 +3,10 @@ import { useFetchRepoData } from "../../hooks/useFetchRepoData"
 import { FormProps } from "../../types/formTypes"
 import { GITHUB_URL_PATTERN } from "../../constantes/regex"
 import { FormButton, FormError, FormInput } from "../../ui"
+import { SkeletonIssuesBoard, SkeletonsRepoInfo } from "../Skeletons"
 
 const FormAdress = () => {
-  const { fetchData } = useFetchRepoData()
+  const { fetchData, isLoading } = useFetchRepoData()
 
   const {
     register,
@@ -39,8 +40,11 @@ const FormAdress = () => {
           />
           {errors.url && <FormError error={errors.url.message} />}
         </label>
-        <FormButton title="Load issues" type="submit" />
+        <FormButton title="Load issues" type="submit" isLoading={isLoading}/>
       </form>
+
+      {isLoading && <SkeletonsRepoInfo/>}
+      {isLoading && <SkeletonIssuesBoard/>}
     </section>
   )
 }

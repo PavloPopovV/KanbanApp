@@ -12,8 +12,9 @@ export type FormInputProps = {
 };
 
 export type FormButtonProps = {
-    title: string
-    type: "button" | "submit"
+    title: string;
+    type: "button" | "submit";
+    isLoading: boolean;
 };
 
 export type FormErrorProps = {

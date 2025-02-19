@@ -3,11 +3,12 @@ import CardList from "../CardList"
 
 const Column = () => {
   const { tasks, setActiveCard, onDrop, setSourceColumnIndex } = useTaskBoard()
-  
+
   return (
-    <section className="grid grid-cols-3 gap-5" aria-labelledby="task-lists">
-      {tasks.length
-        ? tasks.map((board, index) => (
+    <section aria-labelledby="task-lists">
+      {tasks.length ? (
+        <ul className="grid grid-cols-3 gap-5">
+          {tasks.map((board, index) => (
             <CardList
               key={board.id}
               board={board}
@@ -16,8 +17,11 @@ const Column = () => {
               onDrop={onDrop}
               setSourceColumnIndex={setSourceColumnIndex}
             />
-          ))
-        : <span>Enter URL to check issues!</span>}
+          ))}
+        </ul>
+      ) : (
+        <span>Enter URL to check issues!</span>
+      )}
     </section>
   )
 }

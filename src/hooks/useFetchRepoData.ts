@@ -6,8 +6,8 @@ import { FormProps } from "../types/formTypes";
 
 export const useFetchRepoData  = () => {
     const dispatch = useAppDispatch()
-    const [triggerIssues] = useLazyGetAllIssueQuery()
-    const [triggerRepoInfo] = useLazyGetRepoQuery()
+    const [triggerIssues, { isLoading: isLoadingIssues }] = useLazyGetAllIssueQuery()
+    const [triggerRepoInfo, { isLoading: isLoadingRepo }] = useLazyGetRepoQuery()
 
     const fetchData = async (data: FormProps) => {
         try {
@@ -26,5 +26,7 @@ export const useFetchRepoData  = () => {
         }
     }
 
-    return { fetchData };
+    const isLoading = isLoadingIssues || isLoadingRepo;
+
+    return { fetchData, isLoading};
 };
