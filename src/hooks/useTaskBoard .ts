@@ -6,10 +6,10 @@ import { useTasksInitializer } from "./useTasksInitializer";
 
 export const useTaskBoard = () => {
   const key = useAppSelector(selectRepoKey);
-
+  
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const [sourceColumnIndex, setSourceColumnIndex] = useState<number | null>(null);
-
+  
   const { tasks, setTasks } = useTasksInitializer(key);
 
   const onDrop = useCallback((status: string, position: number) => {

@@ -15,7 +15,7 @@ const CardList = ({
       <h3 className="font-bold text-lg text-center text-white uppercase pt-3">
         {board.title}
       </h3>
-      <ul className="px-5 h-[calc(100vh-320px)] overflow-y-auto overscroll-auto">
+      <ul className="px-5 h-[calc(100vh-330px)] overflow-y-auto overscroll-auto">
         {board.list.length ? (
           <>
             <DropArea onDrop={() => onDrop(board.status, 0)} />
